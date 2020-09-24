@@ -1,0 +1,1 @@
+{"options":{"autoIndexId":true},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"toni-website.footerlinks"}],"uuid":"40dfab2bc9b14ae083f92d0a6bfa5d3a"}

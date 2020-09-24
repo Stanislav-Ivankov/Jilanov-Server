@@ -1,0 +1,12 @@
+<section class="Sort-Criteria">
+	<h4 class="Sort-Criteria__Title">Sort Criteria</h4>
+
+	<ng-container *ngFor="let Criteria of Sort_Criteria; let Index = index">
+		<input type="radio" name="Option" [id]="Criteria.ID">
+		<label (click)="Sort_Products(Criteria)" [for]="Criteria.For">
+			<span *ngIf="Available_Promotion && Index == 0"><img src="./assets/images/Promotion.svg"></span>
+			<span *ngIf="Available_New_Product && Index == 3"><img src="./assets/images/New-Product.svg"></span>
+			{{ Criteria.Label }}
+		</label>
+	</ng-container>
+</section>

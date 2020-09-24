@@ -1,0 +1,58 @@
+@import '../../../../assets/scss/variables.scss';
+
+.Sort-Criteria {
+	width: 100%;
+	max-width: 300px;
+	margin-bottom: 50px;
+	text-align: center;
+			
+	@media only screen and (max-width: 900px) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__Title {
+		margin-bottom: 25px;
+		font-size: 18px;
+	}
+
+	input {
+		display: none;
+
+		&:checked + label {
+			border: 1px solid rgba($Main-Gradient-1st-Part, 1);
+			background-color: rgba($Main-Gradient-1st-Part, 1);
+			color: rgba($White, 1);
+		}
+	}
+
+	label {
+		@include Flex(center, center);
+		width: 100%;
+		max-width: 300px;
+		padding: 6.25px;
+		border-radius: 12.5px;
+		box-shadow: 0px 1px 5px $Dark-White;
+		border: 1px solid rgba($Main-Gradient-1st-Part, 1);
+		@include Media-Transition;
+
+		img {
+			@include Image-Size(24px, inline-block);
+			margin-right: 6.25px;
+		}
+
+		&:nth-of-type(2)::after {
+			content: '\2191';
+			margin-left: 6.25px;
+		}
+
+		&:nth-of-type(3)::after {
+			content: '\2193';
+			margin-left: 6.25px;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
